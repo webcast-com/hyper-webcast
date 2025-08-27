@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Tailwind Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fade-in 0.6s ease-out',
+                        'slide-up': 'slide-up 0.6s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out;
+        }
+        .animate-slide-up {
+            animation: slide-up 0.6s ease-out;
+        }
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-300 { animation-delay: 0.3s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-500 { animation-delay: 0.5s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen transition-colors duration-300">
+    <!-- Header with Navigation -->
+    <header class="bg-blue-500 dark:bg-blue-600 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Tailwind App</h1>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#services" class="hover:text-blue-200 transition duration-300 cursor-pointer">Services</a>
+                <a href="#gallery" class="hover:text-blue-200 transition duration-300 cursor-pointer">Gallery</a>
+                <a href="#blog" class="hover:text-blue-200 transition duration-300 cursor-pointer">Blog</a>
+                <a href="#about" class="hover:text-blue-200 transition duration-300 cursor-pointer">About</a>
+                <a href="#contact" class="hover:text-blue-200 transition duration-300 cursor-pointer">Contact</a>
+                <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+            </nav>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center space-x-2">
+                <button id="theme-toggle-mobile" class="p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+                <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="md:hidden mt-4 pb-4 hidden">
+            <div class="flex flex-col space-y-2">
+                <a href="#services" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Services</a>
+                <a href="#gallery" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Gallery</a>
+                <a href="#blog" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Blog</a>
+                <a href="#about" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">About</a>
+                <a href="#contact" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <!-- Hero Section with Background Image -->
+        <section class="text-center mb-12 animate-fade-in relative">
+            <div class="relative h-96 rounded-2xl overflow-hidden mb-8">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                     alt="Technology and innovation background" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <h2 class="text-5xl font-bold mb-4">Welcome to Our Platform</h2>
+                        <p class="text-xl mb-6 max-w-2xl">Discover amazing features with our responsive design and cutting-edge technology</p>
+                        <button id="get-started-btn" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30" aria-label="Get started with our platform">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center animate-slide-up">Our Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 - Web Development -->
+                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-100">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Web development coding on computer" 
+                             class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent"></div>
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                            <div class="font-bold text-xl text-gray-800 dark:text-gray-100">Web Development</div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 text-base">
+                            Create stunning websites with modern technologies and responsive designs that work across all devices.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-4">
+                        <button class="service-btn bg-purple-500 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800" aria-label="Learn more about web development">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Mobile Apps -->
+                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-200">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Mobile app development on smartphone" 
+                             class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent"></div>
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                            <div class="font-bold text-xl text-gray-800 dark:text-gray-100">Mobile Apps</div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 text-base">
+                            Build cross-platform mobile applications that work seamlessly on all devices with native performance.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-4">
+                        <button class="service-btn bg-green-500 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800" aria-label="Learn more about mobile app development">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 - UI/UX Design -->
+                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-300">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="UI/UX design workspace with sketches and laptop" 
+                             class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-yellow-600/20 to-transparent"></div>
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-6 h-6 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v14a2 2 0 01
