@@ -1,12 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combined Tailwind Components</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Combined Tailwind Components
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
@@ -17,9 +19,9 @@
                 }
             }
         }
-    </script>
-    <style>
-        @keyframes fade-in {
+  </script>
+  <style>
+   @keyframes fade-in {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
@@ -39,146 +41,483 @@
         .animate-delay-400 { animation-delay: 0.4s; }
         .animate-delay-500 { animation-delay: 0.5s; }
         .animate-delay-600 { animation-delay: 0.6s; }
-    </style>
-</head>
-<body class="bg-gray-100 dark:bg-gray-900 min-h-screen transition-colors duration-300">
-    <!-- Header with Navigation -->
-    <header class="bg-blue-500 dark:bg-blue-600 text-white p-4 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">My Tailwind App</h1>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="#services" class="hover:text-blue-200 transition duration-300 cursor-pointer">Services</a>
-                <a href="#gallery" class="hover:text-blue-200 transition duration-300 cursor-pointer">Gallery</a>
-                <a href="#blog" class="hover:text-blue-200 transition duration-300 cursor-pointer">Blog</a>
-                <a href="#about" class="hover:text-blue-200 transition duration-300 cursor-pointer">About</a>
-                <a href="#contact" class="hover:text-blue-200 transition duration-300 cursor-pointer">Contact</a>
-                <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" aria-label="Toggle dark mode">
-                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-                    </svg>
-                    <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                </button>
-            </nav>
-            
-            <!-- Mobile menu button -->
-            <div class="md:hidden flex items-center space-x-2">
-                <button id="theme-toggle-mobile" class="p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" aria-label="Toggle dark mode">
-                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-                    </svg>
-                    <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                </button>
-                <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" aria-label="Toggle mobile menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col transition-colors duration-300">
+  <!-- Header with Navigation -->
+  <header class="bg-blue-500 dark:bg-blue-600 text-white p-4 shadow-lg sticky top-0 z-50">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     My Tailwind App
+    </h1>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6">
+     <a class="hover:text-blue-200 transition duration-300 cursor-pointer" href="#services">
+      Services
+     </a>
+     <a class="hover:text-blue-200 transition duration-300 cursor-pointer" href="#gallery">
+      Gallery
+     </a>
+     <a class="hover:text-blue-200 transition duration-300 cursor-pointer" href="#blog">
+      Blog
+     </a>
+     <a class="hover:text-blue-200 transition duration-300 cursor-pointer" href="#about">
+      About
+     </a>
+     <a class="hover:text-blue-200 transition duration-300 cursor-pointer" href="#contact">
+      Contact
+     </a>
+     <button aria-label="Toggle dark mode" class="ml-4 p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" id="theme-toggle">
+      <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewbox="0 0 20 20">
+       <path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd">
+       </path>
+      </svg>
+      <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewbox="0 0 20 20">
+       <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+       </path>
+      </svg>
+     </button>
+    </nav>
+    <!-- Mobile menu button -->
+    <div class="md:hidden flex items-center space-x-2">
+     <button aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" id="theme-toggle-mobile">
+      <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewbox="0 0 20 20">
+       <path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd">
+       </path>
+      </svg>
+      <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewbox="0 0 20 20">
+       <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+       </path>
+      </svg>
+     </button>
+     <button aria-label="Toggle mobile menu" class="p-2 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition duration-300" id="mobile-menu-btn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+     </button>
+    </div>
+   </div>
+   <!-- Mobile Navigation Menu -->
+   <nav class="md:hidden mt-4 pb-4 hidden" id="mobile-menu">
+    <div class="flex flex-col space-y-2">
+     <a class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer" href="#services">
+      Services
+     </a>
+     <a class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer" href="#gallery">
+      Gallery
+     </a>
+     <a class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer" href="#blog">
+      Blog
+     </a>
+     <a class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer" href="#about">
+      About
+     </a>
+     <a class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer" href="#contact">
+      Contact
+     </a>
+    </div>
+   </nav>
+  </header>
+  <!-- Main Content -->
+  <main class="container mx-auto p-6 flex-grow">
+   <!-- Hero Section with Background Image -->
+   <section class="text-center mb-12 animate-fade-in relative">
+    <div class="relative h-96 rounded-2xl overflow-hidden mb-8">
+     <img alt="Technology and innovation background with blue and purple gradient overlay" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80"/>
+     <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 flex items-center justify-center">
+      <div class="text-center text-white px-4">
+       <h2 class="text-5xl font-bold mb-4">
+        Welcome to Our Platform
+       </h2>
+       <p class="text-xl mb-6 max-w-2xl mx-auto">
+        Discover amazing features with our responsive design and cutting-edge technology
+       </p>
+       <button aria-label="Get started with our platform" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30" id="get-started-btn">
+        Get Started
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Services Section -->
+   <section class="mb-16" id="services">
+    <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center animate-slide-up">
+     Our Services
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <!-- Card 1 - Web Development -->
+     <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-100">
+      <div class="h-48 relative overflow-hidden">
+       <img alt="Close-up of hands coding on a laptop with web development code on screen" class="w-full h-full object-cover hover:scale-110 transition duration-500" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent">
+       </div>
+      </div>
+      <div class="px-6 py-4">
+       <div class="flex items-center mb-2">
+        <svg class="w-6 h-6 text-purple-500 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+        <div class="font-bold text-xl text-gray-800 dark:text-gray-100">
+         Web Development
         </div>
-        
-        <!-- Mobile Navigation Menu -->
-        <nav id="mobile-menu" class="md:hidden mt-4 pb-4 hidden">
-            <div class="flex flex-col space-y-2">
-                <a href="#services" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Services</a>
-                <a href="#gallery" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Gallery</a>
-                <a href="#blog" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Blog</a>
-                <a href="#about" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">About</a>
-                <a href="#contact" class="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-blue-500 rounded transition duration-300 cursor-pointer">Contact</a>
-            </div>
-        </nav>
-    </header>
+       </div>
+       <p class="text-gray-700 dark:text-gray-300 text-base">
+        Create stunning websites with modern technologies and responsive designs that work across all devices.
+       </p>
+      </div>
+      <div class="px-6 pb-4">
+       <button aria-label="Learn more about web development" class="service-btn bg-purple-500 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800">
+        Learn More
+       </button>
+      </div>
+     </div>
+     <!-- Card 2 - Mobile Apps -->
+     <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-200">
+      <div class="h-48 relative overflow-hidden">
+       <img alt="Person holding smartphone showing mobile app development interface" class="w-full h-full object-cover hover:scale-110 transition duration-500" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent">
+       </div>
+      </div>
+      <div class="px-6 py-4">
+       <div class="flex items-center mb-2">
+        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+        <div class="font-bold text-xl text-gray-800 dark:text-gray-100">
+         Mobile Apps
+        </div>
+       </div>
+       <p class="text-gray-700 dark:text-gray-300 text-base">
+        Build cross-platform mobile applications that work seamlessly on all devices with native performance.
+       </p>
+      </div>
+      <div class="px-6 pb-4">
+       <button aria-label="Learn more about mobile app development" class="service-btn bg-green-500 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800">
+        Learn More
+       </button>
+      </div>
+     </div>
+     <!-- Card 3 - UI/UX Design -->
+     <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-300">
+      <div class="h-48 relative overflow-hidden">
+       <img alt="Workspace with sketches, laptop, and UI/UX design tools on desk" class="w-full h-full object-cover hover:scale-110 transition duration-500" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-yellow-600/20 to-transparent">
+       </div>
+      </div>
+      <div class="px-6 py-4">
+       <div class="flex items-center mb-2">
+        <svg class="w-6 h-6 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v14a2 2 0 01-4 0zM17 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v14a2 2 0 01-4 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+        <div class="font-bold text-xl text-gray-800 dark:text-gray-100">
+         UI/UX Design
+        </div>
+       </div>
+       <p class="text-gray-700 dark:text-gray-300 text-base">
+        Design intuitive and engaging user interfaces with a focus on user experience and accessibility.
+       </p>
+      </div>
+      <div class="px-6 pb-4">
+       <button aria-label="Learn more about UI/UX design" class="service-btn bg-yellow-500 hover:bg-yellow-700 dark:bg-yellow-600 dark:hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:focus:ring-yellow-800">
+        Learn More
+       </button>
+      </div>
+     </div>
+     <!-- Card 4 - Cloud Services -->
+     <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-400">
+      <div class="h-48 relative overflow-hidden">
+       <img alt="Cloud computing concept with server racks and digital cloud icons" class="w-full h-full object-cover hover:scale-110 transition duration-500" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent">
+       </div>
+      </div>
+      <div class="px-6 py-4">
+       <div class="flex items-center mb-2">
+        <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path d="M3 15a4 4 0 014-4h1a4 4 0 014-4h2a4 4 0 014 4h1a4 4 0 014 4v1a4 4 0 01-4 4H7a4 4 0 01-4-4v-1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+        <div class="font-bold text-xl text-gray-800 dark:text-gray-100">
+         Cloud Services
+        </div>
+       </div>
+       <p class="text-gray-700 dark:text-gray-300 text-base">
+        Leverage scalable cloud infrastructure to deploy, manage, and secure your applications efficiently.
+       </p>
+      </div>
+      <div class="px-6 pb-4">
+       <button aria-label="Learn more about cloud services" class="service-btn bg-blue-500 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+        Learn More
+       </button>
+      </div>
+     </div>
+     <!-- Card 5 - Digital Marketing -->
+     <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-500">
+      <div class="h-48 relative overflow-hidden">
+       <img alt="Digital marketing concept with charts, graphs, and social media icons on screen" class="w-full h-full object-cover hover:scale-110 transition duration-500" src="https://images.unsplash.com/photo-1504384308090-1e3a0a7a7a7a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-pink-600/20 to-transparent">
+       </div>
+      </div>
+      <div class="px-6 py-4">
+       <div class="flex items-center mb-2">
+        <svg class="w-6 h-6 text-pink-500 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path d="M3 10h11M9 21V3m7 18h4M21 3v4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+        <div class="font-bold text-xl text-gray-800 dark:text-gray-100">
+         Digital Marketing
+        </div>
+       </div>
+       <p class="text-gray-700 dark:text-gray-300 text-base">
+        Enhance your online presence and reach your target audience with strategic digital marketing campaigns.
+       </p>
+      </div>
+      <div class="px-6 pb-4">
+       <button aria-label="Learn more about digital marketing" class="service-btn bg-pink-500 hover:bg-pink-700 dark:bg-pink-600 dark:hover:bg-pink-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-pink-300 dark:focus:ring-pink-800">
+        Learn More
+       </button>
+      </div>
+     </div>
+     <!-- Card 6 - SEO Optimization -->
+     <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-600">
+      <div class="h-48 relative overflow-hidden">
+       <img alt="SEO optimization concept with search engine results and analytics" class="w-full h-full object-cover hover:scale-110 transition duration-500" src="https://images.unsplash.com/photo-1504384308090-2a2a2a2a2a2a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-indigo-600/20 to-transparent">
+       </div>
+      </div>
+      <div class="px-6 py-4">
+       <div class="flex items-center mb-2">
+        <svg class="w-6 h-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path d="M8 16l4-4 4 4m0-8l-4 4-4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+        <div class="font-bold text-xl text-gray-800 dark:text-gray-100">
+         SEO Optimization
+        </div>
+       </div>
+       <p class="text-gray-700 dark:text-gray-300 text-base">
+        Improve your website’s visibility and ranking on search engines with expert SEO strategies.
+       </p>
+      </div>
+      <div class="px-6 pb-4">
+       <button aria-label="Learn more about SEO optimization" class="service-btn bg-indigo-500 hover:bg-indigo-700 dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-800">
+        Learn More
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Gallery Section -->
+   <section class="mb-16" id="gallery">
+    <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center animate-slide-up">
+     Gallery
+    </h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+     <img alt="Gallery image 1 showing a modern office workspace with computers and plants" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/3d086c6d-7445-4918-24a3-cf1bc4d0866f.jpg" width="600"/>
+     <img alt="Gallery image 2 showing a team collaborating in a bright meeting room" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/d96e6db4-0409-463c-9f73-af29ed486144.jpg" width="600"/>
+     <img alt="Gallery image 3 showing a close-up of hands typing on a laptop keyboard" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/a6da9072-90bd-4b02-2321-96b1e87f4aab.jpg" width="600"/>
+     <img alt="Gallery image 4 showing a creative brainstorming session with sticky notes on wall" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/f811338e-8247-434a-82e9-62657c0de22c.jpg" width="600"/>
+     <img alt="Gallery image 5 showing a developer coding on multiple monitors" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/aac576ff-98b0-41ad-25e3-aefdbc97f383.jpg" width="600"/>
+     <img alt="Gallery image 6 showing a modern office building exterior with glass facade" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/eaf4c86d-71b1-4418-7c5c-9f09980f542c.jpg" width="600"/>
+     <img alt="Gallery image 7 showing a designer sketching UI wireframes on paper" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/3bc4dc3f-de4a-4d23-744e-7206bfb9032d.jpg" width="600"/>
+     <img alt="Gallery image 8 showing a team celebrating success in office environment" class="rounded-lg shadow-md object-cover w-full h-48" height="400" src="https://storage.googleapis.com/a1aa/image/4a051994-e122-4f33-7c94-a53c6d5aa390.jpg" width="600"/>
+    </div>
+   </section>
+   <!-- Blog Section -->
+   <section class="mb-16" id="blog">
+    <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center animate-slide-up">
+     Latest Blog Posts
+    </h3>
+    <div class="space-y-8 max-w-4xl mx-auto">
+     <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-100">
+      <h4 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+       How to Build Responsive Websites in 2024
+      </h4>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+       Learn the latest techniques and best practices for creating responsive websites that look great on any device.
+      </p>
+      <a aria-label="Read more about building responsive websites" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline" href="#">
+       Read More
+      </a>
+     </article>
+     <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-200">
+      <h4 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+       Top Mobile App Development Trends
+      </h4>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+       Explore the emerging trends in mobile app development and how to leverage them for your projects.
+      </p>
+      <a aria-label="Read more about mobile app development trends" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline" href="#">
+       Read More
+      </a>
+     </article>
+     <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-300">
+      <h4 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+       UI/UX Design Principles for Beginners
+      </h4>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+       Understand the fundamental principles of UI/UX design to create user-friendly and attractive interfaces.
+      </p>
+      <a aria-label="Read more about UI/UX design principles" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline" href="#">
+       Read More
+      </a>
+     </article>
+     <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-400">
+      <h4 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+       Cloud Computing: What You Need to Know
+      </h4>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+       A comprehensive guide to cloud computing and how it can benefit your business operations.
+      </p>
+      <a aria-label="Read more about cloud computing" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline" href="#">
+       Read More
+      </a>
+     </article>
+     <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-500">
+      <h4 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+       Effective Digital Marketing Strategies
+      </h4>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+       Discover proven digital marketing strategies to increase your brand awareness and sales.
+      </p>
+      <a aria-label="Read more about digital marketing strategies" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline" href="#">
+       Read More
+      </a>
+     </article>
+     <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-600">
+      <h4 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+       SEO Optimization Tips for 2024
+      </h4>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+       Boost your website’s search engine ranking with these essential SEO tips and tricks.
+      </p>
+      <a aria-label="Read more about SEO optimization tips" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline" href="#">
+       Read More
+      </a>
+     </article>
+    </div>
+   </section>
+   <!-- About Section -->
+   <section class="mb-16 max-w-4xl mx-auto animate-slide-up" id="about">
+    <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+     About Us
+    </h3>
+    <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+     <img alt="About us team photo showing diverse group of professionals smiling in modern office" class="rounded-lg shadow-lg w-64 h-64 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/48f5776a-09b4-437e-d804-2ddd75c518f6.jpg" width="400"/>
+     <div class="text-gray-700 dark:text-gray-300 text-lg">
+      <p class="mb-4">
+       We are a passionate team of developers, designers, and marketers dedicated to delivering high-quality digital solutions. Our mission is to empower businesses with innovative technology and creative design.
+      </p>
+      <p>
+       With years of experience and a commitment to excellence, we strive to exceed our clients' expectations and build long-lasting partnerships.
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Contact Section -->
+   <section class="mb-16 max-w-3xl mx-auto animate-slide-up" id="contact">
+    <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+     Contact Us
+    </h3>
+    <form aria-label="Contact form" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 space-y-6">
+     <div>
+      <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2" for="name">
+       Name
+      </label>
+      <input class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" id="name" name="name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2" for="email">
+       Email
+      </label>
+      <input class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" id="email" name="email" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 dark:text-gray-300 font-semibold mb-2" for="message">
+       Message
+      </label>
+      <textarea class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" id="message" name="message" required="" rows="5"></textarea>
+     </div>
+     <button aria-label="Send message" class="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800" type="submit">
+      Send Message
+     </button>
+    </form>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-blue-600 dark:bg-blue-700 text-white py-8 mt-auto">
+   <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+     <div class="text-center md:text-left">
+      <h4 class="text-xl font-bold mb-2">
+       My Tailwind App
+      </h4>
+      <p class="text-sm">
+       &copy; 2024 My Tailwind App. All rights reserved.
+      </p>
+     </div>
+     <div class="flex space-x-6">
+      <a aria-label="Facebook" class="hover:text-blue-300 transition duration-300" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+       <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+      <a aria-label="Twitter" class="hover:text-blue-300 transition duration-300" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+       <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a aria-label="Instagram" class="hover:text-blue-300 transition duration-300" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+       <i class="fab fa-instagram fa-lg"></i>
+      </a>
+      <a aria-label="LinkedIn" class="hover:text-blue-300 transition duration-300" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+       <i class="fab fa-linkedin-in fa-lg"></i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Theme toggle for desktop
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        // Theme toggle for mobile
+        const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-6">
-        <!-- Hero Section with Background Image -->
-        <section class="text-center mb-12 animate-fade-in relative">
-            <div class="relative h-96 rounded-2xl overflow-hidden mb-8">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-                     alt="Technology and innovation background" 
-                     class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <h2 class="text-5xl font-bold mb-4">Welcome to Our Platform</h2>
-                        <p class="text-xl mb-6 max-w-2xl">Discover amazing features with our responsive design and cutting-edge technology</p>
-                        <button id="get-started-btn" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30" aria-label="Get started with our platform">
-                            Get Started
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
 
-        <!-- Services Section -->
-        <section id="services" class="mb-16">
-            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center animate-slide-up">Our Services</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 - Web Development -->
-                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-100">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="Web development coding on computer" 
-                             class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent"></div>
-                    </div>
-                    <div class="px-6 py-4">
-                        <div class="flex items-center mb-2">
-                            <svg class="w-6 h-6 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                            </svg>
-                            <div class="font-bold text-xl text-gray-800 dark:text-gray-100">Web Development</div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300 text-base">
-                            Create stunning websites with modern technologies and responsive designs that work across all devices.
-                        </p>
-                    </div>
-                    <div class="px-6 pb-4">
-                        <button class="service-btn bg-purple-500 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800" aria-label="Learn more about web development">
-                            Learn More
-                        </button>
-                    </div>
-                </div>
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        themeToggleMobileBtn.addEventListener('click', toggleTheme);
 
-                <!-- Card 2 - Mobile Apps -->
-                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-200">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="Mobile app development on smartphone" 
-                             class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent"></div>
-                    </div>
-                    <div class="px-6 py-4">
-                        <div class="flex items-center mb-2">
-                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                            </svg>
-                            <div class="font-bold text-xl text-gray-800 dark:text-gray-100">Mobile Apps</div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300 text-base">
-                            Build cross-platform mobile applications that work seamlessly on all devices with native performance.
-                        </p>
-                    </div>
-                    <div class="px-6 pb-4">
-                        <button class="service-btn bg-green-500 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800" aria-label="Learn more about mobile app development">
-                            Learn More
-                        </button>
-                    </div>
-                </div>
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-                <!-- Card 3 - UI/UX Design -->
-                <div class="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up animate-delay-300">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="UI/UX design workspace with sketches and laptop" 
-                             class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-yellow-600/20 to-transparent"></div>
-                    </div>
-                    <div class="px-6 py-4">
-                        <div class="flex items-center mb-2">
-                            <svg class="w-6 h-6 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v14a2 2 0 01
+        // Load theme from localStorage or system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+  </script>
+ </body>
+</html>
