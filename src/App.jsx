@@ -6,6 +6,7 @@ import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
 import Gallery from './pages/Gallery'
 import Blog from './pages/Blog'
+import BlogDetail from './pages/BlogDetail'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
