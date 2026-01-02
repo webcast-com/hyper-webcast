@@ -35,12 +35,12 @@ export default function ServiceDetail() {
       {/* Hero Section */}
       <section className="mb-12 animate-fade-in">
         <div className="relative h-96 rounded-2xl overflow-hidden mb-8">
-          <img 
-            alt={service.title} 
-            className="w-full h-full object-cover" 
+          <img
+            alt={service.title}
+            className="w-full h-full object-cover"
             src={service.image}
           />
-          <div className="absolute inset-0" style={{background: `linear-gradient(135deg, ${service.color}99, ${service.color}cc)`}} className="absolute inset-0 flex items-end p-8">
+          <div className="absolute inset-0 flex items-end p-8" style={{background: `linear-gradient(135deg, ${service.color}99, ${service.color}cc)`}}>
             <div className="text-white">
               <h1 className="text-5xl font-bold mb-4">{service.title}</h1>
               <p className="text-xl max-w-2xl">{service.description}</p>
