@@ -1,53 +1,5 @@
-const blogPosts = [
-  {
-    id: 1,
-    title: 'How to Build Responsive Websites in 2024',
-    excerpt: 'Learn the latest techniques and best practices for creating responsive websites that look great on any device.',
-    date: 'December 15, 2024',
-    category: 'Web Development',
-    content: 'Responsive design is no longer optional in modern web development. With devices of all sizes accessing our websites, it\'s crucial to ensure your site works perfectly on everything from smartphones to large desktop monitors. In this comprehensive guide, we\'ll explore the latest techniques and best practices for creating truly responsive websites in 2024.'
-  },
-  {
-    id: 2,
-    title: 'Top Mobile App Development Trends',
-    excerpt: 'Explore the emerging trends in mobile app development and how to leverage them for your projects.',
-    date: 'December 10, 2024',
-    category: 'Mobile Development',
-    content: 'The mobile app landscape is constantly evolving. As we move through 2024, several key trends are shaping how developers build mobile applications. From cross-platform development frameworks to AI integration, the opportunities are vast and exciting. Let\'s explore the trends that are defining mobile app development today.'
-  },
-  {
-    id: 3,
-    title: 'UI/UX Design Principles for Beginners',
-    excerpt: 'Understand the fundamental principles of UI/UX design to create user-friendly and attractive interfaces.',
-    date: 'December 5, 2024',
-    category: 'Design',
-    content: 'UI/UX design is an art and science combined. While it may seem intimidating at first, understanding the fundamental principles can help you create interfaces that are both beautiful and functional. In this guide, we\'ll cover the core principles that every designer should know.'
-  },
-  {
-    id: 4,
-    title: 'Cloud Computing: What You Need to Know',
-    excerpt: 'A comprehensive guide to cloud computing and how it can benefit your business operations.',
-    date: 'November 30, 2024',
-    category: 'Cloud Technology',
-    content: 'Cloud computing has transformed how businesses operate. Whether you\'re just starting to explore cloud services or looking to optimize your existing infrastructure, this guide will help you understand the fundamentals and benefits of cloud computing.'
-  },
-  {
-    id: 5,
-    title: 'Effective Digital Marketing Strategies',
-    excerpt: 'Discover proven digital marketing strategies to increase your brand awareness and sales.',
-    date: 'November 25, 2024',
-    category: 'Marketing',
-    content: 'In today\'s digital world, having a solid marketing strategy is essential for business success. From social media marketing to content strategy, there are countless ways to reach your target audience. Let\'s explore the most effective digital marketing strategies for 2024.'
-  },
-  {
-    id: 6,
-    title: 'SEO Optimization Tips for 2024',
-    excerpt: 'Boost your website\'s search engine ranking with these essential SEO tips and tricks.',
-    date: 'November 20, 2024',
-    category: 'SEO',
-    content: 'Search engine optimization remains a critical component of any digital marketing strategy. With search algorithms constantly evolving, it\'s important to stay updated on the latest SEO best practices. This guide covers the most important SEO tips for 2024.'
-  }
-]
+import { Link } from 'react-router-dom'
+import { blogPosts } from '../data/blog'
 
 export default function Blog() {
   return (
