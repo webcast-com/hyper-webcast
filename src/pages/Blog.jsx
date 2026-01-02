@@ -31,9 +31,9 @@ export default function Blog() {
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 {post.excerpt}
               </p>
-              <a href="#" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+              <Link to={`/blog/${post.slug}`} className="text-blue-600 dark:text-blue-400 font-semibold hover:underline inline-block">
                 Read More →
-              </a>
+              </Link>
             </article>
           ))}
         </div>
