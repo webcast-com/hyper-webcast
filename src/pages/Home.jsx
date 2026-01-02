@@ -54,9 +54,9 @@ export default function Home() {
                 <p className="text-gray-700 dark:text-gray-300 text-base">{service.description}</p>
               </div>
               <div className="px-6 pb-4">
-                <button className={`text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4`} style={{backgroundColor: service.color, borderColor: service.color}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>
+                <Link to={`/services/${service.slug}`} className={`inline-block text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 hover:opacity-80`} style={{backgroundColor: service.color, borderColor: service.color}}>
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           ))}
