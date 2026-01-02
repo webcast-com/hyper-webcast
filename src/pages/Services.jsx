@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { servicesList } from '../data/services'
 
 export default function Services() {
@@ -15,9 +16,9 @@ export default function Services() {
           {servicesList.map((service, index) => (
             <div key={index} className="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300 animate-slide-up" style={{animationDelay: `${(index + 1) * 0.1}s`}}>
               <div className="h-48 relative overflow-hidden">
-                <img 
-                  alt={service.title} 
-                  className="w-full h-full object-cover hover:scale-110 transition duration-500" 
+                <img
+                  alt={service.title}
+                  className="w-full h-full object-cover hover:scale-110 transition duration-500"
                   src={service.image}
                 />
                 <div className="absolute inset-0" style={{background: `linear-gradient(to top, ${service.colorGradient}20, transparent)`}}></div>
@@ -34,9 +35,9 @@ export default function Services() {
                 <p className="text-gray-700 dark:text-gray-300 text-base">{service.description}</p>
               </div>
               <div className="px-6 pb-4">
-                <button className="text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 hover:opacity-80" style={{backgroundColor: service.color}}>
+                <Link to={`/services/${service.slug}`} className="inline-block text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:ring-4 hover:opacity-80" style={{backgroundColor: service.color}}>
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           ))}
