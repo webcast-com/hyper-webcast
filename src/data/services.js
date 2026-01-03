@@ -1,158 +1,158 @@
 export const servicesList = [
   {
-    slug: 'web-development',
-    title: 'Web Development',
-    description: 'Create stunning websites with modern technologies and responsive designs that work across all devices.',
-    details: 'Our web development services combine cutting-edge technology with proven design principles to create websites that not only look great but also deliver results. From simple marketing sites to complex web applications, we have the expertise to bring your vision to life.',
+    slug: 'affiliate-marketing-program',
+    title: 'Affiliate Marketing Program',
+    description: 'Launch and manage a profitable affiliate program that drives quality traffic and increases sales through trusted partners.',
+    details: 'Our affiliate marketing programs connect you with experienced marketers who promote your products to their engaged audiences. We handle recruiter, management, tracking, and commission payments while you focus on product excellence.',
     color: '#a855f7',
     colorGradient: '#a855f7',
     icon: 'code',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
     features: [
-      'Responsive Design',
-      'Fast Performance',
-      'SEO Optimization',
-      'Mobile-First Approach',
-      'Modern Frameworks',
-      'API Integration'
+      'Affiliate Recruitment & Onboarding',
+      'Real-Time Tracking & Attribution',
+      'Automated Commission Management',
+      'Performance Analytics Dashboard',
+      'Affiliate Marketing Materials',
+      'Fraud Detection & Prevention'
     ],
     benefits: [
-      'Increased online visibility and credibility',
-      'Better user experience for your visitors',
-      'Higher conversion rates',
-      'Improved search engine rankings',
-      'Reduced development costs',
-      'Faster time-to-market'
+      'Access to thousands of potential partners',
+      'Performance-based cost model',
+      'Increased brand awareness',
+      'Higher quality traffic',
+      'Scalable sales growth',
+      'Reduced acquisition costs'
     ]
   },
   {
-    slug: 'mobile-apps',
-    title: 'Mobile Apps',
-    description: 'Build cross-platform mobile applications that work seamlessly on all devices with native performance.',
-    details: 'We develop native and cross-platform mobile applications that engage users and solve real business problems. Our team specializes in iOS, Android, and hybrid development, ensuring your app reaches the widest possible audience.',
+    slug: 'content-marketing-strategy',
+    title: 'Content Marketing Strategy',
+    description: 'Develop a comprehensive content strategy that attracts organic traffic, builds authority, and converts readers into customers.',
+    details: 'We create content marketing strategies tailored to your business goals. From blog posts and videos to infographics and case studies, we develop content that educates, engages, and converts your audience.',
     color: '#22c55e',
     colorGradient: '#22c55e',
     icon: 'mobile',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
     features: [
-      'Native & Cross-Platform Development',
-      'App Store Optimization',
-      'Push Notifications',
-      'Offline Functionality',
-      'Analytics Integration',
-      'User Authentication'
+      'Strategic Content Planning',
+      'SEO-Optimized Blog Posts',
+      'Video Content Production',
+      'Infographic Design',
+      'Content Calendar Management',
+      'Performance Tracking & Optimization'
     ],
     benefits: [
-      'Direct access to your customer base',
-      'Enhanced user engagement',
-      'Higher user retention rates',
-      'Monetization opportunities',
-      'Brand loyalty building',
-      'Competitive advantage'
+      'Improved organic search rankings',
+      'Consistent branded traffic',
+      'Established authority in your niche',
+      'Higher engagement rates',
+      'Better customer trust',
+      'Long-term ROI'
     ]
   },
   {
-    slug: 'uiux-design',
-    title: 'UI/UX Design',
-    description: 'Design intuitive and engaging user interfaces with a focus on user experience and accessibility.',
-    details: 'Great design is at the heart of every successful digital product. Our UI/UX designers create beautiful, intuitive interfaces that users love. We focus on understanding your users, validating our designs, and iterating based on real feedback.',
+    slug: 'email-marketing-automation',
+    title: 'Email Marketing Automation',
+    description: 'Build automated email campaigns that nurture leads, drive conversions, and create sustainable passive income.',
+    details: 'We design sophisticated email funnels and autoresponder sequences that engage subscribers at the right time with the right message. Our automation strategies increase conversions while reducing manual work.',
     color: '#eab308',
     colorGradient: '#eab308',
     icon: 'design',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
     features: [
-      'User Research & Testing',
-      'Wireframing & Prototyping',
-      'Visual Design',
-      'Interaction Design',
-      'Accessibility Compliance',
-      'Design System Creation'
+      'Email List Building & Management',
+      'Segmentation & Personalization',
+      'Automated Funnel Design',
+      'A/B Testing & Optimization',
+      'Landing Page Creation',
+      'Analytics & Reporting'
     ],
     benefits: [
-      'Increased user satisfaction',
-      'Lower bounce rates',
-      'Improved conversion rates',
-      'Reduced support costs',
-      'Brand consistency',
-      'Competitive differentiation'
+      'Higher conversion rates',
+      'Passive income generation',
+      'Improved customer lifetime value',
+      'Reduced unsubscribe rates',
+      'Data-driven optimizations',
+      'Scalable revenue growth'
     ]
   },
   {
-    slug: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Leverage scalable cloud infrastructure to deploy, manage, and secure your applications efficiently.',
-    details: 'Transform your infrastructure with our cloud services. We help you migrate to the cloud, optimize your cloud architecture, and ensure your applications are secure, scalable, and cost-effective.',
+    slug: 'seo-optimization-service',
+    title: 'SEO Optimization Service',
+    description: 'Dominate search results with our advanced SEO strategies that drive targeted organic traffic to your website.',
+    details: 'Our SEO experts implement comprehensive optimization strategies covering technical SEO, on-page optimization, link building, and content strategy to improve your search rankings and organic traffic.',
     color: '#3b82f6',
     colorGradient: '#3b82f6',
     icon: 'cloud',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
     features: [
-      'Cloud Migration',
-      'Infrastructure as Code',
-      'Auto-Scaling',
-      'Load Balancing',
-      'Disaster Recovery',
-      'Security & Compliance'
-    ],
-    benefits: [
-      'Reduced infrastructure costs',
-      'Improved scalability',
-      'Higher availability',
-      'Enhanced security',
-      'Easier maintenance',
-      'Global reach'
-    ]
-  },
-  {
-    slug: 'digital-marketing',
-    title: 'Digital Marketing',
-    description: 'Enhance your online presence and reach your target audience with strategic digital marketing campaigns.',
-    details: 'Grow your business with our comprehensive digital marketing strategies. From content marketing to paid advertising, we create campaigns that drive real results and help you connect with your ideal customers.',
-    color: '#ec4899',
-    colorGradient: '#ec4899',
-    icon: 'marketing',
-    image: 'https://images.unsplash.com/photo-1504384308090-1e3a0a7a7a7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    features: [
-      'Content Marketing',
-      'Social Media Management',
-      'Email Marketing',
-      'Paid Advertising',
-      'Marketing Analytics',
-      'Brand Strategy'
-    ],
-    benefits: [
-      'Increased brand awareness',
-      'More qualified leads',
-      'Better customer engagement',
-      'Higher ROI on marketing spend',
-      'Improved customer retention',
-      'Data-driven decision making'
-    ]
-  },
-  {
-    slug: 'seo-optimization',
-    title: 'SEO Optimization',
-    description: 'Improve your website\'s visibility and ranking on search engines with expert SEO strategies.',
-    details: 'Dominate search results with our proven SEO strategies. We focus on sustainable, white-hat techniques that improve your organic visibility and drive qualified traffic to your website.',
-    color: '#6366f1',
-    colorGradient: '#6366f1',
-    icon: 'seo',
-    image: 'https://images.unsplash.com/photo-1504384308090-2a2a2a2a2a2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    features: [
-      'Keyword Research',
+      'Keyword Research & Analysis',
+      'Technical SEO Audit',
       'On-Page Optimization',
-      'Technical SEO',
-      'Link Building',
-      'Content Strategy',
-      'SEO Audits'
+      'Link Building Strategy',
+      'Content Optimization',
+      'Search Console Management'
     ],
     benefits: [
       'Increased organic traffic',
       'Improved search rankings',
       'Lower customer acquisition costs',
-      'Long-term sustainable growth',
-      'Better user experience',
+      'Better website authority',
+      'Sustainable long-term growth',
       'Competitive advantage'
+    ]
+  },
+  {
+    slug: 'social-media-marketing',
+    title: 'Social Media Marketing',
+    description: 'Build an engaged community and drive conversions through strategic social media campaigns and content.',
+    details: 'We create and manage social media strategies that build your brand presence, engage your audience, and drive sales. From content creation to community management, we handle all aspects of social media marketing.',
+    color: '#ec4899',
+    colorGradient: '#ec4899',
+    icon: 'marketing',
+    image: 'https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    features: [
+      'Social Media Strategy Development',
+      'Content Creation & Scheduling',
+      'Community Management',
+      'Paid Social Advertising',
+      'Influencer Partnerships',
+      'Analytics & Reporting'
+    ],
+    benefits: [
+      'Increased brand awareness',
+      'Higher engagement rates',
+      'Direct customer relationships',
+      'Targeted audience reach',
+      'Improved conversion rates',
+      'Brand loyalty building'
+    ]
+  },
+  {
+    slug: 'performance-marketing-analytics',
+    title: 'Performance Marketing Analytics',
+    description: 'Track, measure, and optimize every aspect of your marketing campaigns with comprehensive analytics and reporting.',
+    details: 'We implement advanced tracking and analytics systems that measure campaign performance, identify optimization opportunities, and provide actionable insights to maximize your marketing ROI.',
+    color: '#6366f1',
+    colorGradient: '#6366f1',
+    icon: 'seo',
+    image: 'https://images.unsplash.com/photo-1542744173-8e90f74769b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    features: [
+      'Conversion Tracking Setup',
+      'Custom Dashboard Creation',
+      'UTM Parameter Strategy',
+      'Attribution Modeling',
+      'Performance Reporting',
+      'Optimization Recommendations'
+    ],
+    benefits: [
+      'Data-driven decision making',
+      'Improved campaign performance',
+      'Clear ROI measurement',
+      'Identified optimization opportunities',
+      'Better budget allocation',
+      'Increased marketing efficiency'
     ]
   }
 ]
