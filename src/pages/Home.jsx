@@ -18,7 +18,7 @@ export default function Home() {
               <p className="text-xl mb-6 max-w-2xl mx-auto">
                 Discover amazing features with our responsive design and cutting-edge technology
               </p>
-              <Link to="/services" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30">
+              <Link to="/services" target="_blank" className="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30">
                 Get Started
               </Link>
             </div>
